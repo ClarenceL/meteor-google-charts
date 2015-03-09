@@ -9,6 +9,7 @@ Package.onUse(function(api) {
   api.versionsFrom('1.0.2.1');
   api.addFiles('rafaelhdr:google-charts.js');
   api.export(['drawChart'], 'client');
+  api.export(['drawVisualization'], 'client');
 });
 
 Package.onTest(function(api) {
