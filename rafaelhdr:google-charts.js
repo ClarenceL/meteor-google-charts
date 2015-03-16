@@ -79,6 +79,7 @@ if (Meteor.isClient) {
 
     chart.draw( data, options );
 
+    return chart;
   }
 
 }
