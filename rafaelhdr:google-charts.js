@@ -68,7 +68,15 @@ if (Meteor.isClient) {
 
     var options = chart.options;
 
+    var events = chart.events;
+
     var chart = new google.visualization[chart.type](document.getElementById(chart.target));
+
+
+    for (eventTypeKey in events){
+      google.visualization.events.addListener( chart, eventTypeKey, events[ eventTypeKey ] )
+    }
+
     chart.draw( data, options );
 
   }
